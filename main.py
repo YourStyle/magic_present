@@ -8,7 +8,7 @@ app = Client('test', api_id, api_hash)
 
 @app.on_message(filters.command("magic", prefixes=".") & filters.me)
 def mag(_, msg):
-    text = input()
+    text = input("Введите поздравление")
     buf = ""
     for i in range(9):
         buf += "🤍" * 9 + "\n"
