@@ -5,7 +5,7 @@ api_id = 7859901
 api_hash = '0fb18f748d79a1d68e44e599fdf390cd'
 app = Client('test', api_id, api_hash)
 
-text = input("Введите поздравление")
+text = input("Введите поздравление: ")
 
 @app.on_message(filters.command("magic", prefixes=".") & filters.me)
 def mag(_, msg):
