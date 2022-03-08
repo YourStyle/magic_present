@@ -5,10 +5,11 @@ api_id = 7859901
 api_hash = '0fb18f748d79a1d68e44e599fdf390cd'
 app = Client('test', api_id, api_hash)
 
+text = input("Введите поздравление")
 
 @app.on_message(filters.command("magic", prefixes=".") & filters.me)
 def mag(_, msg):
-    text = input("Введите поздравление")
+    global text
     buf = ""
     for i in range(9):
         buf += "🤍" * 9 + "\n"
@@ -112,7 +113,5 @@ def mag(_, msg):
 
     msg.edit(text)
 
-
-# app.send_message('me', 'Hello, myself!')
 
 app.run()
